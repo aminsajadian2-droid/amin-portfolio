@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>امین سجادیان | طراحی سایت، ادمین اینستاگرام و تدوین ویدئو</title>
+<meta name="description" content="امین سجادیان؛ طراح سایت وردپرس، ادمین اینستاگرام، تدوینگر ویدئو و توسعه‌دهنده افزونه وردپرس.">
+<meta property="og:title" content="امین سجادیان | سایت، محتوا و ویدئو">
+<meta property="og:description" content="سایت می‌سازم، محتوا می‌سازم و کاری می‌کنم کسب‌وکارتان دیده شود.">
+<meta name="theme-color" content="#0A1A3F">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
+
+<style>
+:root {
+--navy: #0A1A3F;
+--ink: #0F172A;
+--blue-900: #0B2A6F;
+--blue-700: #1D4ED8;
+--blue-600: #2563EB;
+--blue-500: #3B82F6;
+--sky: #0EA5E9;
+--cyan: #22D3EE;
+--ice: #EFF6FF;
+--ice-2: #E0F2FE;
+--line: #DBEAFE;
+--muted: #5B6B86;
+--shadow: 0 30px 60px -30px rgba(11, 42, 111, .35);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html {
+scroll-behavior: smooth;
+scroll-padding-top: 84px;
+-webkit-text-size-adjust: 100%;
+text-size-adjust: 100%;
+}
+body {
+margin: 0;
+font-family: "Vazirmatn", Tahoma, sans-serif;
+color: var(--ink);
+background: #fff;
+line-height: 1.9;
+overflow-x: hidden;
+-webkit-font-smoothing: antialiased;
+-webkit-tap-highlight-color: transparent;
+}
+img, svg { max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+h1, h2, h3 { font-weight: 900; }
+.container { width: 92%; max-width: 1160px; margin: 0 auto; }
+.ltr { direction: ltr; unicode-bidi: isolate; display: inline-block; }
+
+.i {
+width: 20px; height: 20px;
+fill: none; stroke: currentColor; stroke-width: 2;
+stroke-linecap: round; stroke-linejoin: round;
+flex-shrink: 0; transition: transform .25s;
+}
+
+.skip {
+position: absolute; right: 16px; top: -60px; z-index: 200;
+background: var(--blue-700); color: #fff;
+padding: 8px 16px; border-radius: 10px;
+}
+.skip:focus { top: 16px; }
+:focus-visible { outline: 3px solid var(--sky); outline-offset: 3px; border-radius: 8px; }
+
+/* ---------- Header ---------- */
+.header {
+position: -webkit-sticky; position: sticky; top: 0; z-index: 50;
+background: rgba(255, 255, 255, .92);
+-webkit-backdrop-filter: blur(14px);
+backdrop-filter: blur(14px);
+border-bottom: 1px solid transparent;
+transition: border-color .3s, box-shadow .3s;
+}
+.header.scrolled { border-color: var(--line); box-shadow: 0 8px 30px rgba(15, 40, 100, .06); }
+.nav { position: relative; display: flex; align-items: center; justify-content: space-between; height: 72px; }
+.brand { display: flex; align-items: center; font-weight: 800; line-height: 1.4; }
+.brand-mark {
+width: 42px; height: 42px; border-radius: 13px; margin-left: 12px;
+display: flex; align-items: center; justify-content: center;
+background: linear-gradient(135deg, var(--blue-700), var(--sky));
+color: #fff; font-weight: 900; font-size: 18px;
+box-shadow: 0 10px 22px -8px rgba(37, 99, 235, .7);
+}
+.brand small { display: block; font-weight: 500; color: var(--muted); font-size: 12px; }
+.menu { display: flex; list-style: none; margin: 0; padding: 0; }
+.menu li + li { margin-right: 4px; }
+.menu a {
+display: block; padding: 8px 14px; border-radius: 999px;
+font-size: 14.5px; font-weight: 700; color: var(--muted);
+transition: color .2s, background .2s;
+}
+.menu a:hover, .menu a.active { color: var(--blue-700); background: var(--ice); }
+.menu .menu-cta { display: none; }
+.menu-toggle {
+display: none; align-items: center; justify-content: center;
+width: 46px; height: 46px; border-radius: 13px;
+border: 1px solid var(--line); background: #fff;
+color: var(--blue-900); cursor: pointer; padding: 0;
+}
+.menu-toggle .i { width: 22px; height: 22px; }
+
+/* ---------- Buttons ---------- */
+.btn {
+display: inline-flex; align-items: center; justify-content: center;
+padding: 13px 22px; border-radius: 14px; border: 0;
+font: inherit; font-size: 15px; font-weight: 800; line-height: 1.6;
+cursor: pointer; transition: transform .2s, box-shadow .2s, background .2s;
+}
+.btn .i { margin: 0 8px; }
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: scale(.98); }
+.btn-primary {
+background: linear-gradient(135deg, var(--blue-700), var(--blue-500));
+color: #fff; box-shadow: 0 14px 28px -12px rgba(37, 99, 235, .8);
+}
+.btn-ghost { background: #fff; color: var(--blue-900); border: 1px solid var(--line); }
+.btn-ghost:hover { border-color: #bfdbfe; background: var(--ice); }
+.btn-white { background: #fff; color: var(--blue-900); }
+.btn-glass { background: rgba(255, 255, 255, .12); color: #fff; border: 1px solid rgba(255, 255, 255, .3); }
+.btn-glass:hover { background: rgba(255, 255, 255, .2); }
+.btn-sm { padding: 10px 16px; font-size: 14px; }
+
+/* ---------- Hero ---------- */
+.hero { position: relative; overflow: hidden; padding: 70px 0 100px; }
+.hero-bg {
+position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 0;
+background-image:
+linear-gradient(var(--line) 1px, transparent 1px),
+linear-gradient(90deg, var(--line) 1px, transparent 1px);
+background-size: 44px 44px;
+-webkit-mask-image: radial-gradient(ellipse at 50% 30%, #000 15%, transparent 70%);
+mask-image: radial-gradient(ellipse at 50% 30%, #000 15%, transparent 70%);
+opacity: .7;
+}
+.blob { position: absolute; border-radius: 50%; filter: blur(80px); z-index: 0; pointer-events: none; }
+.blob-1 { width: 440px; height: 440px; background: rgba(59, 130, 246, .25); top: -140px; left: -100px; }
+.blob-2 { width: 380px; height: 380px; background: rgba(14, 165, 233, .2); bottom: -160px; right: 8%; }
+
+.hero-grid {
+position: relative; z-index: 1;
+display: grid; grid-template-columns: 1.1fr .9fr; grid-gap: 60px; gap: 60px; align-items: center;
+}
+.status {
+display: inline-flex; align-items: center;
+padding: 7px 16px; border-radius: 999px;
+background: var(--ice); border: 1px solid var(--line);
+font-size: 13.5px; font-weight: 800; color: var(--blue-700);
+}
+.dot {
+width: 8px; height: 8px; border-radius: 50%; margin-left: 10px;
+background: #22c55e; box-shadow: 0 0 0 4px rgba(34, 197, 94, .2);
+animation: pulse 2s infinite;
+}
+.hero h1 {
+font-size: 52px; font-size: clamp(30px, 5vw, 56px); line-height: 1.45;
+margin: 22px 0 18px; color: var(--navy);
+}
+.grad {
+background: linear-gradient(90deg, var(--blue-700), var(--sky) 60%, var(--cyan));
+-webkit-background-clip: text; background-clip: text;
+-webkit-text-fill-color: transparent; color: var(--blue-600);
+}
+.lead { font-size: 17.5px; color: var(--muted); max-width: 590px; margin: 0; }
+.hero-actions { display: flex; flex-wrap: wrap; margin: 30px -6px 36px; }
+.hero-actions .btn { margin: 6px; }
+.facts { display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 12px; gap: 12px; max-width: 560px; }
+.fact {
+background: rgba(255, 255, 255, .9); border: 1px solid var(--line);
+border-radius: 18px; padding: 14px 16px;
+}
+.fact strong { display: block; font-size: 28px; font-weight: 900; color: var(--blue-700); line-height: 1.3; }
+.fact span { font-size: 13px; color: var(--muted); line-height: 1.6; display: block; }
+
+.visual { position: relative; padding: 40px 10px; }
+.browser {
+background: #fff; border: 1px solid var(--line); border-radius: 24px;
+box-shadow: 0 40px 80px -30px rgba(11, 42, 111, .4);
+overflow: hidden; transform: rotate(-2deg);
+}
+.browser-bar {
+display: flex; align-items: center; direction: ltr;
+padding: 12px 16px; background: var(--ice); border-bottom: 1px solid var(--line);
+}
+.browser-bar i { width: 10px; height: 10px; border-radius: 50%; background: #bfdbfe; margin-right: 6px; }
+.browser-bar .url {
+flex: 1; margin-left: 8px; padding: 3px 12px; border-radius: 8px;
+background: #fff; font: 12px monospace; color: var(--muted);
+white-space: nowrap; overflow: hidden;
+}
+.browser-body { padding: 22px; }
+.mock-hero {
+position: relative; overflow: hidden; padding: 22px; border-radius: 16px; color: #fff;
+background: linear-gradient(135deg, var(--blue-900), var(--blue-600) 55%, var(--sky));
+}
+.mock-hero::after {
+content: ""; position: absolute; width: 180px; height: 180px; border-radius: 50%;
+border: 26px solid rgba(255, 255, 255, .1); top: -70px; left: -50px;
+}
+.mock-hero b { display: block; font-size: 18px; position: relative; z-index: 1; }
+.mock-line { height: 8px; border-radius: 99px; background: rgba(255, 255, 255, .35); margin-top: 10px; }
+.mock-btn { display: inline-block; margin-top: 16px; padding: 5px 16px; border-radius: 9px; background: #fff; color: var(--blue-700); font-size: 12px; font-weight: 800; }
+.mock-row { display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 10px; gap: 10px; margin-top: 14px; }
+.mock-row div { height: 70px; border-radius: 12px; background: var(--ice); border: 1px solid var(--line); }
+.mock-row div:nth-child(2) { background: var(--ice-2); }
+
+.float {
+position: absolute; display: flex; align-items: center;
+padding: 10px 14px; border-radius: 16px; background: #fff;
+border: 1px solid var(--line); box-shadow: 0 20px 40px -20px rgba(11, 42, 111, .45);
+font-size: 13.5px; font-weight: 800; line-height: 1.5; white-space: nowrap;
+animation: float 6s ease-in-out infinite;
+}
+.float small { display: block; font-weight: 500; color: var(--muted); font-size: 12px; }
+.float .ic {
+width: 38px; height: 38px; border-radius: 11px; margin-left: 10px;
+display: flex; align-items: center; justify-content: center; color: #fff;
+}
+.ic-blue { background: linear-gradient(135deg, var(--blue-700), var(--blue-500)); }
+.ic-sky { background: linear-gradient(135deg, var(--sky), var(--cyan)); }
+.ic-navy { background: linear-gradient(135deg, var(--navy), var(--blue-700)); }
+.f1 { top: 0; left: 0; }
+.f2 { top: 46%; right: 0; animation-delay: -2s; }
+.f3 { bottom: 0; left: 30px; animation-delay: -4s; }
+
+/* ---------- Skill band ---------- */
+.band { background: var(--navy); color: #cfe3ff; overflow: hidden; padding: 16px 0; }
+.band-track { display: flex; direction: ltr; width: -webkit-max-content; width: max-content; animation: marquee 40s linear infinite; }
+.band span { display: inline-flex; align-items: center; padding: 0 24px; font-weight: 700; white-space: nowrap; direction: rtl; }
+.band span::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--sky); margin-left: 12px; }
+
+/* ---------- Sections ---------- */
+section { padding: 100px 0; }
+.alt { background: linear-gradient(180deg, #fff, var(--ice)); }
+.sec-head { max-width: 700px; margin-bottom: 50px; }
+.eyebrow {
+display: inline-block; padding: 6px 14px; border-radius: 999px;
+background: var(--ice); color: var(--blue-600);
+font-size: 13.5px; font-weight: 800;
+}
+.sec-head h2 { font-size: 40px; font-size: clamp(25px, 3.6vw, 42px); line-height: 1.55; margin: 16px 0 12px; color: var(--navy); }
+.sec-head p { color: var(--muted); font-size: 16.5px; margin: 0; }
+
+/* ---------- Projects ---------- */
+.projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 22px; gap: 22px; }
+.project {
+display: flex; flex-direction: column; overflow: hidden;
+background: #fff; border: 1px solid var(--line); border-radius: 24px;
+transition: transform .3s, box-shadow .3s, border-color .3s;
+}
+.project:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: #bfdbfe; }
+.project-cover {
+position: relative; overflow: hidden; height: 190px; padding: 22px;
+display: flex; flex-direction: column; justify-content: flex-end; color: #fff;
+}
+.project-cover::after {
+content: ""; position: absolute; width: 230px; height: 230px; border-radius: 50%;
+border: 32px solid rgba(255, 255, 255, .09); top: -90px; left: -70px;
+transition: transform .5s;
+}
+.project:hover .project-cover::after { transform: scale(1.15); }
+.c1 { background: linear-gradient(135deg, #0B2A6F, #2563EB); }
+.c2 { background: linear-gradient(135deg, #0C4A6E, #0EA5E9); }
+.c3 { background: linear-gradient(135deg, #1E3A8A, #60A5FA); }
+.cover-domain {
+align-self: flex-start; direction: ltr; position: relative; z-index: 1;
+padding: 4px 12px; border-radius: 999px;
+background: rgba(255, 255, 255, .16); font: 13px monospace;
+}
+.cover-title { font-size: 25px; font-weight: 900; margin-top: 8px; position: relative; z-index: 1; }
+.cover-kind { font-size: 13.5px; color: #dbeafe; position: relative; z-index: 1; }
+.project-body { display: flex; flex-direction: column; flex: 1; padding: 22px; }
+.project-body p { margin: 0 0 16px; color: var(--muted); font-size: 15px; }
+.tags { display: flex; flex-wrap: wrap; margin: -4px -4px 16px; }
+.tag {
+margin: 4px; padding: 3px 11px; border-radius: 999px;
+background: var(--ice); border: 1px solid var(--line);
+color: var(--blue-700); font-size: 12.5px; font-weight: 700;
+}
+.project-link {
+margin-top: auto; display: inline-flex; align-items: center; align-self: flex-start;
+padding: 8px 0; font-weight: 800; color: var(--blue-700);
+}
+.project-link .i { margin-right: 8px; }
+.project-link:hover .i { transform: translate(-3px, -3px); }
+
+.projects-wide { display: grid; grid-template-columns: 1fr 1fr; grid-gap: 22px; gap: 22px; margin-top: 22px; }
+.wide { position: relative; overflow: hidden; padding: 32px; border-radius: 24px; }
+.wide h3 { font-size: 22px; margin: 14px 0 8px; position: relative; z-index: 1; }
+.wide p { margin: 0; position: relative; z-index: 1; }
+.wide-ic { width: 52px; height: 52px; border-radius: 15px; display: flex; align-items: center; justify-content: center; color: #fff; }
+.insta-card { background: linear-gradient(135deg, var(--ice), #fff 70%); border: 1px solid var(--line); }
+.insta-card h3 { color: var(--navy); }
+.insta-card p { color: var(--muted); }
+.handles { display: flex; flex-wrap: wrap; margin: 16px -5px 0; }
+.handle {
+display: inline-flex; align-items: center; direction: ltr; margin: 5px;
+padding: 8px 14px; border-radius: 12px; background: #fff;
+border: 1px solid var(--line); font-weight: 800; color: var(--blue-900);
+transition: border-color .2s, transform .2s;
+}
+.handle .i { margin-right: 8px; }
+.handle:hover { border-color: var(--blue-500); transform: translateY(-2px); }
+.plugin-card { color: #fff; background: linear-gradient(135deg, var(--navy), var(--blue-900) 50%, var(--blue-700)); }
+.plugin-card p { color: #c7dbff; }
+.plugin-card::after {
+content: "</>"; position: absolute; left: 24px; bottom: -20px;
+font: 900 120px monospace; color: rgba(255, 255, 255, .06); direction: ltr;
+}
+.plugin-card .btn { margin-top: 22px; position: relative; z-index: 1; }
+.badge-new {
+display: inline-block; margin-right: 8px; padding: 2px 10px; border-radius: 999px;
+background: rgba(56, 189, 248, .2); color: #7dd3fc; font-size: 12px; font-weight: 800; vertical-align: middle;
+}
+
+/* ---------- Services ---------- */
+.services-grid { display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 22px; gap: 22px; }
+.service {
+position: relative; overflow: hidden; padding: 32px;
+background: #fff; border: 1px solid var(--line); border-radius: 24px;
+transition: transform .3s, box-shadow .3s;
+}
+.service::before {
+content: ""; position: absolute; top: 0; right: 0; left: 0; height: 4px;
+background: linear-gradient(90deg, var(--blue-700), var(--sky));
+transform: scaleX(0); transform-origin: right; transition: transform .45s;
+}
+.service:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.service:hover::before { transform: scaleX(1); }
+.service-ic {
+width: 56px; height: 56px; border-radius: 16px; margin-bottom: 18px;
+display: flex; align-items: center; justify-content: center; color: #fff;
+background: linear-gradient(135deg, var(--blue-600), var(--sky));
+box-shadow: 0 12px 24px -10px rgba(14, 165, 233, .7);
+}
+.service-ic .i { width: 26px; height: 26px; }
+.service h3 { font-size: 21px; margin: 0 0 8px; color: var(--navy); line-height: 1.6; }
+.service > p { color: var(--muted); margin: 0 0 18px; }
+.checks { list-style: none; padding: 0; margin: 0; }
+.checks li { display: flex; align-items: flex-start; font-size: 15px; margin-bottom: 10px; }
+.checks li:last-child { margin-bottom: 0; }
+.checks .i {
+width: 22px; height: 22px; padding: 4px; margin: 4px 0 0 10px; border-radius: 50%;
+background: var(--ice-2); color: var(--blue-700); stroke-width: 3;
+}
+
+/* ---------- Why me ---------- */
+.why {
+color: #fff;
+background:
+radial-gradient(circle at 15% 20%, rgba(56, 189, 248, .18), transparent 40%),
+radial-gradient(circle at 85% 85%, rgba(37, 99, 235, .35), transparent 45%),
+var(--navy);
+}
+.why .eyebrow { background: rgba(255, 255, 255, .08); color: #7dd3fc; }
+.why .sec-head h2 { color: #fff; }
+.why .sec-head p { color: #a9c1e8; }
+.why-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 18px; gap: 18px; }
+.why-card {
+padding: 26px; border-radius: 20px;
+background: rgba(255, 255, 255, .05); border: 1px solid rgba(255, 255, 255, .1);
+transition: background .3s, border-color .3s, transform .3s;
+}
+.why-card:hover { background: rgba(255, 255, 255, .08); border-color: rgba(125, 211, 252, .45); transform: translateY(-4px); }
+.why-card .ic {
+width: 48px; height: 48px; border-radius: 14px; margin-bottom: 14px;
+display: flex; align-items: center; justify-content: center;
+background: rgba(56, 189, 248, .15); color: #7dd3fc;
+}
+.why-card h3 { margin: 0 0 6px; font-size: 18.5px; }
+.why-card p { margin: 0; color: #a9c1e8; font-size: 15px; }
+.why-note {
+display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+margin-top: 40px; padding: 26px 30px; border-radius: 20px;
+background: linear-gradient(90deg, rgba(37, 99, 235, .4), rgba(14, 165, 233, .15));
+border: 1px solid rgba(125, 211, 252, .3);
+font-size: 18px; font-weight: 700; line-height: 1.8;
+}
+.why-note p { margin: 0 0 0 18px; max-width: 760px; }
+
+/* ---------- Growth ---------- */
+.growth-grid { display: grid; grid-template-columns: .9fr 1.1fr; grid-gap: 60px; gap: 60px; align-items: start; }
+.sticky { position: -webkit-sticky; position: sticky; top: 110px; }
+.quote {
+margin: 26px 0 0; padding: 22px 24px; border-radius: 20px;
+background: var(--ice); border-right: 4px solid var(--blue-600);
+font-size: 17px; font-weight: 700; color: var(--blue-900); line-height: 1.9;
+}
+.timeline { position: relative; list-style: none; margin: 0; padding: 0 36px 0 0; }
+.timeline::before {
+content: ""; position: absolute; right: 9px; top: 10px; bottom: 10px; width: 2px;
+background: linear-gradient(var(--blue-600), var(--sky), var(--line));
+}
+.timeline li { position: relative; padding-bottom: 30px; }
+.timeline li:last-child { padding-bottom: 0; }
+.timeline li::before {
+content: ""; position: absolute; right: -33px; top: 9px;
+width: 16px; height: 16px; border-radius: 50%;
+background: #fff; border: 4px solid var(--blue-600);
+}
+.timeline li.now::before { background: var(--sky); border-color: var(--ice-2); box-shadow: 0 0 0 6px rgba(14, 165, 233, .2); }
+.step-label { font-size: 12.5px; font-weight: 800; color: var(--sky); }
+.timeline h3 { margin: 2px 0 6px; color: var(--navy); font-size: 19px; line-height: 1.6; }
+.timeline p { margin: 0; color: var(--muted); }
+
+/* ---------- Process ---------- */
+.process-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-gap: 18px; gap: 18px; }
+.proc {
+padding: 28px 24px; border-radius: 22px; background: #fff; border: 1px solid var(--line);
+transition: transform .3s, box-shadow .3s;
+}
+.proc:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.num {
+display: inline-block; font-size: 42px; font-weight: 900; line-height: 1.2;
+background: linear-gradient(135deg, var(--blue-700), var(--cyan));
+-webkit-background-clip: text; background-clip: text;
+-webkit-text-fill-color: transparent; color: var(--blue-600);
+}
+.proc h3 { margin: 10px 0 6px; font-size: 18px; color: var(--navy); }
+.proc p { margin: 0; color: var(--muted); font-size: 15px; }
+
+/* ---------- Contact ---------- */
+.contact-box {
+position: relative; overflow: hidden;
+display: grid; grid-template-columns: 1.2fr .8fr; grid-gap: 44px; gap: 44px; align-items: center;
+padding: 56px; border-radius: 32px; color: #fff;
+background: linear-gradient(135deg, var(--blue-900), var(--blue-600) 55%, var(--sky));
+box-shadow: 0 40px 80px -40px rgba(11, 42, 111, .7);
+}
+.contact-box::before, .contact-box::after {
+content: ""; position: absolute; border-radius: 50%; pointer-events: none;
+border: 40px solid rgba(255, 255, 255, .07);
+}
+.contact-box::before { width: 340px; height: 340px; top: -150px; left: -90px; }
+.contact-box::after { width: 220px; height: 220px; bottom: -110px; right: 30%; }
+.contact-box > div { position: relative; z-index: 1; }
+.contact-box .eyebrow { background: rgba(255, 255, 255, .14); color: #fff; }
+.contact-box h2 { font-size: 38px; font-size: clamp(24px, 3.4vw, 40px); line-height: 1.6; margin: 16px 0 12px; }
+.contact-box p { color: #dbeafe; margin: 0; font-size: 16.5px; }
+.phone {
+display: flex; align-items: center; justify-content: space-between;
+margin-bottom: 12px; padding: 16px 20px; border-radius: 18px;
+background: rgba(255, 255, 255, .12); border: 1px solid rgba(255, 255, 255, .28);
+transition: background .2s;
+}
+.phone:hover { background: rgba(255, 255, 255, .2); }
+.phone small { display: block; color: #dbeafe; font-size: 13px; }
+.phone strong { font-size: 24px; font-weight: 900; letter-spacing: 1px; }
+.phone-ic {
+width: 48px; height: 48px; border-radius: 14px; flex-shrink: 0;
+display: flex; align-items: center; justify-content: center;
+background: #fff; color: var(--blue-700);
+}
+.contact-btns { display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px; gap: 10px; }
+.contact-hint { margin-top: 14px !important; font-size: 13.5px !important; text-align: center; }
+
+/* ---------- Footer, toast, mobile bar ---------- */
+.footer { padding: 30px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+.footer .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+.footer p { margin: 6px 0; }
+.footer-links { display: flex; margin: 6px 0; }
+.footer-links button, .footer-links a {
+display: inline-flex; align-items: center; margin-right: 18px;
+background: none; border: 0; padding: 0; font: inherit; color: var(--blue-700); font-weight: 700; cursor: pointer;
+}
+.footer-links .i { margin-left: 6px; width: 18px; height: 18px; }
+
+.toast {
+position: fixed; bottom: 24px; left: 50%; z-index: 100;
+transform: translate(-50%, 20px); opacity: 0; pointer-events: none;
+padding: 12px 22px; border-radius: 14px; background: var(--navy); color: #fff;
+font-size: 14.5px; font-weight: 700; white-space: nowrap;
+box-shadow: 0 20px 40px -15px rgba(10, 26, 63, .6);
+transition: opacity .3s, transform .3s;
+}
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+.mobile-bar {
+display: none; position: fixed; bottom: 0; right: 0; left: 0; z-index: 60;
+padding: 10px 12px; padding-bottom: calc(10px + env(safe-area-inset-bottom));
+background: rgba(255, 255, 255, .96);
+-webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+border-top: 1px solid var(--line);
+box-shadow: 0 -10px 30px rgba(15, 40, 100, .08);
+}
+.mobile-bar .btn { width: 100%; padding: 12px 10px; }
+
+/* ---------- Animations (only when JS works) ---------- */
+.anim .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+.anim .reveal.in { opacity: 1; transform: none; }
+@keyframes pulse { 50% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); } }
+@keyframes float { 50% { transform: translateY(-10px); } }
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+@media (prefers-reduced-motion: reduce) {
+*, *::before, *::after { animation: none !important; transition: none !important; }
+html { scroll-behavior: auto; }
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1024px) {
+.hero-grid, .growth-grid, .contact-box { grid-template-columns: 1fr; }
+.hero-grid { gap: 30px; }
+.projects-grid, .why-grid, .process-grid { grid-template-columns: 1fr 1fr; }
+.sticky { position: static; }
+.visual { width: 100%; max-width: 520px; margin: 0 auto; }
+.growth-grid { gap: 40px; }
+.contact-box { gap: 30px; padding: 44px; }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 860px) {
+.nav { height: 66px; }
+.menu {
+display: none; position: absolute; top: 66px; right: 0; left: 0;
+flex-direction: column; padding: 10px; border-radius: 20px;
+background: #fff; border: 1px solid var(--line); box-shadow: var(--shadow);
+}
+.menu.open { display: flex; animation: drop .25s ease; }
+.menu li + li { margin: 4px 0 0; }
+.menu a { padding: 13px 16px; border-radius: 14px; font-size: 16px; color: var(--ink); }
+.menu .menu-cta { display: block; margin-top: 8px; }
+.menu .menu-cta a {
+text-align: center; color: #fff;
+background: linear-gradient(135deg, var(--blue-700), var(--blue-500));
+}
+.menu-toggle { display: flex; }
+.nav-cta { display: none; }
+html { scroll-padding-top: 78px; }
+}
+@keyframes drop { from { opacity: 0; transform: translateY(-8px); } }
+
+@media (max-width: 760px) {
+body { padding-bottom: 76px; }
+.mobile-bar { display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px; gap: 10px; }
+.toast { bottom: 92px; }
+
+section { padding: 64px 0; }
+.sec-head { margin-bottom: 32px; }
+.sec-head p { font-size: 15.5px; }
+
+.hero { padding: 36px 0 56px; }
+.hero h1 { margin: 16px 0 14px; line-height: 1.55; }
+.lead { font-size: 15.5px; line-height: 2; }
+.hero-actions { margin: 22px -5px 26px; }
+.hero-actions .btn { flex: 1 1 140px; margin: 5px; }
+.facts { gap: 8px; }
+.fact { padding: 12px 10px; border-radius: 14px; text-align: center; }
+.fact strong { font-size: 24px; }
+.fact span { font-size: 12px; }
+.blob-1 { width: 260px; height: 260px; }
+.blob-2 { width: 240px; height: 240px; }
+
+.visual { padding: 34px 0 40px; }
+.browser { transform: none; border-radius: 20px; }
+.browser-body { padding: 14px; }
+.mock-hero { padding: 18px; }
+.mock-hero b { font-size: 15px; }
+.mock-row div { height: 54px; }
+.float { padding: 8px 12px; font-size: 12.5px; border-radius: 14px; }
+.float .ic { width: 32px; height: 32px; }
+.float small { font-size: 11px; }
+.f1 { top: 0; left: 8px; }
+.f2 { display: none; }
+.f3 { bottom: 0; left: auto; right: 8px; }
+
+.band { padding: 12px 0; font-size: 14px; }
+
+.projects-grid, .projects-wide, .services-grid, .why-grid, .process-grid { grid-template-columns: 1fr; gap: 16px; }
+.project { border-radius: 20px; }
+.project-cover { height: 160px; padding: 18px; }
+.cover-title { font-size: 22px; }
+.project-body { padding: 18px; }
+.wide, .service { padding: 24px 20px; border-radius: 20px; }
+.wide h3 { font-size: 19px; }
+.service h3 { font-size: 19px; }
+.checks li { font-size: 14.5px; }
+.plugin-card .btn { width: 100%; }
+
+.why-card { padding: 22px 20px; }
+.why-note { flex-direction: column; align-items: stretch; padding: 22px 20px; font-size: 16px; text-align: center; }
+.why-note p { margin: 0 0 16px; }
+.why-note .btn { width: 100%; }
+
+.quote { font-size: 15.5px; padding: 18px 20px; }
+.timeline { padding-right: 32px; }
+.timeline li::before { right: -29px; }
+.timeline h3 { font-size: 17.5px; }
+
+.proc { padding: 22px 20px; display: grid; grid-template-columns: auto 1fr; grid-column-gap: 16px; column-gap: 16px; align-items: start; }
+.proc .num { font-size: 34px; grid-row: span 2; }
+.proc h3 { margin: 4px 0 4px; }
+
+.contact-box { padding: 30px 20px; border-radius: 24px; }
+.contact-box p { font-size: 15.5px; }
+.phone { padding: 14px 16px; }
+.phone strong { font-size: 20px; }
+
+.footer { text-align: center; }
+.footer .container { flex-direction: column; }
+.footer-links a, .footer-links button { margin: 0 9px; }
+}
+
+@media (max-width: 380px) {
+.brand small { display: none; }
+.fact strong { font-size: 21px; }
+.fact span { font-size: 11px; }
+.contact-btns { grid-template-columns: 1fr; }
+.float small { display: none; }
+}
+
+@media print {
+.header, .band, .toast, .visual, .hero-actions, .footer-links, .blob, .mobile-bar { display: none !important; }
+.reveal { opacity: 1 !important; transform: none !important; }
+body { padding: 0; }
+section { padding: 28px 0; }
+.why, .contact-box, .plugin-card { background: #fff !important; color: #000 !important; box-shadow: none; border: 1px solid #ccc; }
+.why *, .contact-box *, .plugin-card * { color: #000 !important; }
+}
+</style>
+</head>
+
+<body id="top">
+<a href="#main" class="skip">رفتن به محتوای اصلی</a>
+
+<!-- Icons -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M17 17 7 7M17 7H7v10"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+<symbol id="i-msg" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></symbol>
+<symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+<symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></symbol>
+<symbol id="i-insta" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+<symbol id="i-video" viewBox="0 0 24 24"><path d="m23 7-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></symbol>
+<symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+<symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
+<symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+<symbol id="i-cpu" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></symbol>
+<symbol id="i-trend" viewBox="0 0 24 24"><path d="m23 6-9.5 9.5-5-5L1 18M17 6h6v6"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+<symbol id="i-print" viewBox="0 0 24 24"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></symbol>
+</svg>
+
+<!-- Header -->
+<header class="header">
+<div class="container nav">
+<a href="#top" class="brand" aria-label="امین سجادیان - صفحه اصلی">
+<span class="brand-mark">ا</span>
+<span>امین سجادیان<small>سایت · محتوا · ویدئو</small></span>
+</a>
+
+<ul class="menu" id="menu">
+<li><a href="#projects" data-nav>نمونه‌کارها</a></li>
+<li><a href="#services" data-nav>خدمات</a></li>
+<li><a href="#why" data-nav>چرا من</a></li>
+<li><a href="#growth" data-nav>مسیر رشد</a></li>
+<li><a href="#contact" data-nav>تماس</a></li>
+<li class="menu-cta"><a href="#contact">شروع همکاری</a></li>
+</ul>
+
+<a href="#contact" class="btn btn-primary btn-sm nav-cta">
+شروع همکاری
+<svg class="i"><use href="#i-arrow" xlink:href="#i-arrow"/></svg>
+</a>
+
+<button class="menu-toggle" type="button" aria-controls="menu" aria-expanded="false" aria-label="منو">
+<svg class="i"><use id="menu-icon" href="#i-menu" xlink:href="#i-menu"/></svg>
+</button>
+</div>
+</header>
+
+<main id="main">
+<!-- Hero -->
+<section class="hero">
+<span class="hero-bg"></span>
+<span class="blob blob-1"></span>
+<span class="blob blob-2"></span>
+
+<div class="container hero-grid">
+<div class="reveal">
+<span class="status"><span class="dot"></span>آماده همکاری جدید هستم</span>
+
+<h1>
+کسب‌وکارتان را
+<span class="grad">آنلاین، دیدنی و حرفه‌ای</span>
+می‌کنم.
+</h1>
+
+<p class="lead">
+من امین سجادیان هستم. سایت وردپرسی طراحی و مدیریت می‌کنم، پیج اینستاگرام را از ایده تا انتشار جلو می‌برم و ویدئو تدوین می‌کنم.
+کاری که معمولاً سه نفر انجامش می‌دهند، اینجا با یک نفر هماهنگ می‌شود؛ کسی که هر روز چیز تازه‌ای یاد می‌گیرد و همان روز در کارش به کار می‌بندد.
+</p>
+
+<div class="hero-actions">
+<a href="#projects" class="btn btn-primary">
+نمونه‌کارهایم
+<svg class="i"><use href="#i-arrow" xlink:href="#i-arrow"/></svg>
+</a>
+<a href="tel:+989365529565" class="btn btn-ghost">
+<svg class="i"><use href="#i-phone" xlink:href="#i-phone"/></svg>
+تماس مستقیم
+</a>
+</div>
+
+<div class="facts">
+<div class="fact"><strong>۳</strong><span>وب‌سایت واقعی و فعال</span></div>
+<div class="fact"><strong>۳</strong><span>پیج اینستاگرام</span></div>
+<div class="fact"><strong>۱</strong><span>افزونه وردپرس منتشرشده</span></div>
+</div>
+</div>
+
+<div class="visual reveal" aria-hidden="true">
+<div class="browser">
+<div class="browser-bar"><i></i><i></i><i></i><span class="url">your-brand.ir</span></div>
+<div class="browser-body">
+<div class="mock-hero">
+<b>سایت شما، حرفه‌ای‌تر از همیشه</b>
+<div class="mock-line" style="width:75%"></div>
+<div class="mock-line" style="width:50%"></div>
+<span class="mock-btn">مشاهده محصولات</span>
+</div>
+<div class="mock-row"><div></div><div></div><div></div></div>
+</div>
+</div>
+
+<div class="float f1">
+<span class="ic ic-sky"><svg class="i"><use href="#i-video" xlink:href="#i-video"/></svg></span>
+<span>Reels جدید آماده شد<small>تدوین، زیرنویس و کاور</small></span>
+</div>
+<div class="float f2">
+<span class="ic ic-navy"><svg class="i"><use href="#i-code" xlink:href="#i-code"/></svg></span>
+<span>افزونه وردپرس<small>منتشرشده در راست‌چین</small></span>
+</div>
+<div class="float f3">
+<span class="ic ic-blue"><svg class="i"><use href="#i-insta" xlink:href="#i-insta"/></svg></span>
+<span>پست امروز منتشر شد<small>طبق تقویم محتوایی</small></span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Skill band -->
+<div class="band" aria-hidden="true">
+<div class="band-track">
+<span>طراحی سایت وردپرس</span><span>فروشگاه اینترنتی</span><span>ادمین اینستاگرام</span><span>تدوین Reels</span><span>طراحی کاور و پست</span><span>توسعه افزونه وردپرس</span><span>تولید محتوا با هوش مصنوعی</span><span>اصول سئو و UX</span>
+<span>طراحی سایت وردپرس</span><span>فروشگاه اینترنتی</span><span>ادمین اینستاگرام</span><span>تدوین Reels</span><span>طراحی کاور و پست</span><span>توسعه افزونه وردپرس</span><span>تولید محتوا با هوش مصنوعی</span><span>اصول سئو و UX</span>
+</div>
+</div>
+
+<!-- Projects -->
+<section id="projects">
+<div class="container">
+<div class="sec-head reveal">
+<span class="eyebrow">نمونه‌کارها</span>
+<h2>حرف نمی‌زنم، <span class="grad">نشان می‌دهم.</span></h2>
+<p>این‌ها پروژه‌های واقعی هستند که رویشان کار کرده‌ام. همه آنلاین‌اند و می‌توانید همین حالا بازشان کنید.</p>
+</div>
+
+<div class="projects-grid">
+<article class="project reveal">
+<div class="project-cover c1">
+<span class="cover-domain">morabiesabz.ir</span>
+<span class="cover-title">مربی سبز</span>
+<span class="cover-kind">سایت آموزشی · توسعه فردی</span>
+</div>
+<div class="project-body">
+<p>صفحات دوره‌ها و محصولات را طراحی و مدیریت کردم و محتوای سایت را مرتب به‌روز نگه داشتم تا کاربر بدون سردرگمی به آموزشی که می‌خواهد برسد.</p>
+<div class="tags"><span class="tag">طراحی صفحات</span><span class="tag">مدیریت محتوا</span><span class="tag">صفحات دوره</span><span class="tag">تجربه کاربری</span></div>
+<a class="project-link" href="https://morabiesabz.ir" target="_blank" rel="noopener noreferrer">
+مشاهده سایت <svg class="i"><use href="#i-arrow" xlink:href="#i-arrow"/></svg>
+</a>
+</div>
+</article>
+
+<article class="project reveal">
+<div class="project-cover c2">
+<span class="cover-domain">laptopparsian.com</span>
+<span class="cover-title">لپ‌تاپ پارسیان</span>
+<span class="cover-kind">فروشگاه اینترنتی · تجهیزات دیجیتال</span>
+</div>
+<div class="project-body">
+<p>از چیدمان دسته‌بندی‌ها تا صفحات محصول را مدیریت کردم؛ در فروشگاهی که هر جزئیات کوچک روی تصمیم خرید مشتری اثر مستقیم دارد.</p>
+<div class="tags"><span class="tag">فروشگاه اینترنتی</span><span class="tag">مدیریت محصولات</span><span class="tag">دسته‌بندی</span><span class="tag">محتوای سایت</span></div>
+<a class="project-link" href="https://laptopparsian.com" target="_blank" rel="noopener noreferrer">
+مشاهده سایت <svg class="i"><use href="#i-arrow" xlink:href="#i-arrow"/></svg>
+</a>
+</div>
+</article>
+
+<article class="project reveal">
+<div class="project-cover c3">
+<span class="cover-domain">noragoldj.com</span>
+<span class="cover-title">نورا گلد</span>
+<span class="cover-kind">طلا و جواهر · برند لوکس</span>
+</div>
+<div class="project-body">
+<p>در حوزه‌ای که تصویر و حس لوکس بودن حرف اول را می‌زند، طراحی صفحات، مدیریت محصولات و محتوای بصری سایت را بر عهده داشتم.</p>
+<div class="tags"><span class="tag">طراحی سایت</span><span class="tag">محتوای بصری</span><span class="tag">صفحات محصول</span><span class="tag">ظاهر لوکس</span></div>
+<a class="project-link" href="https://noragoldj.com" target="_blank" rel="noopener noreferrer">
+مشاهده سایت <svg class="i"><use href="#i-arrow" xlink:href="#i-arrow"/></svg>
+</a>
+</div>
+</article>
+</div>
+
+<div class="projects-wide">
+<article class="wide insta-card reveal">
+<span class="wide-ic ic-blue"><svg class="i"><use href="#i-insta" xlink:href="#i-insta"/></svg></span>
+<h3>ادمین و ادیتور سه پیج اینستاگرام</h3>
+<p>
+برای این پیج‌ها محتوا آماده کردم، ویدئو تدوین کردم، کاور طراحی کردم و انتشار را مدیریت کردم.
+سه حوزه متفاوت با سه لحن متفاوت؛ یعنی بلدم خودم را با صدای برند شما هماهنگ کنم.
+</p>
+<!-- آدرس دقیق پیج‌ها را بررسی و در صورت نیاز اصلاح کن -->
+<div class="handles">
+<a class="handle" href="https://instagram.com/kakoreza" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-insta" xlink:href="#i-insta"/></svg>Kakoreza</a>
+<a class="handle" href="https://instagram.com/morabiesabz" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-insta" xlink:href="#i-insta"/></svg>Morabiesabz</a>
+<a class="handle" href="https://instagram.com/noragold" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-insta" xlink:href="#i-insta"/></svg>Noragold</a>
+</div>
+</article>
+
+<article class="wide plugin-card reveal">
+<span class="wide-ic ic-sky"><svg class="i"><use href="#i-code" xlink:href="#i-code"/></svg></span>
+<h3>افزونه وردپرس اختصاصی <span class="badge-new">ساخت خودم</span></h3>
+<p>
+یک افزونه وردپرس را از ایده تا کدنویسی و انتشار خودم ساختم و در راست‌چین برای فروش گذاشتم.
+یعنی وردپرس را فقط از پیشخوانش نمی‌شناسم؛ از داخل هم می‌شناسم.
+</p>
+<!-- لینک صفحه محصولت در راست‌چین را اینجا بگذار -->
+<a class="btn btn-white btn-sm" href="https://www.rtl-theme.com/" target="_blank" rel="noopener noreferrer">
+مشاهده در راست‌چین <svg class="i"><use href="#i-arrow" xlink:href="#i-arrow"/></svg>
+</a>
+</article>
+</div>
+</div>
+</section>
+
+<!-- Services -->
+<section id="services" class="alt">
+<div class="container">
+<div class="sec-head reveal">
+<span class="eyebrow">خدمات</span>
+<h2>چه کاری می‌توانم <span class="grad">برایتان انجام بدهم؟</span></h2>
+<p>چهار مهارتی که کنار هم، حضور دیجیتال یک کسب‌وکار را کامل می‌کنند.</p>
+</div>
+
+<div class="services-grid">
+<article class="service reveal">
+<span class="service-ic"><svg class="i"><use href="#i-monitor" xlink:href="#i-monitor"/></svg></span>
+<h3>طراحی و مدیریت سایت وردپرس</h3>
+<p>سایتی تحویل می‌دهم که هم خوش‌ظاهر باشد، هم سریع، و مشتری راحت در آن بچرخد و خرید کند.</p>
+<ul class="checks">
+<li><svg class="i"><use href="#i-check" xlink:href="#i-check"/></svg>طراحی صفحات اختصاصی، هماهنگ با هویت برند شما</li>
+<li><svg class="i"><use href="#i-check" xlink:href="#i-check"/></svg>راه‌اندازی و مدیریت فروشگاه، محصولات و دسته‌بندی‌ها</li>
+<li><svg class="i"><use href="#i-check" xlink:href="#i-check"/></svg>ریسپانسیو کامل؛ روی موبایل همان‌قدر خوب که روی دسکتاپ</li>
+<li><svg class="i"><use href="#i-check" xlink:href="#i-check"/></svg>رعایت اصول پایه سئو و تجربه کاربری از روز اول</li>
+</ul>
+</article>
+
+<article class="service reveal">
+<span class="service-ic"><svg class="i"><use href="#i-insta" xlink:href="#i-insta"/></svg></span>
+<h3>ادمین و مدیریت اینستاگرام</h3>
+<p>پیج شما را مثل پیج خودم می‌گردانم؛ با برنامه، با حوصله و با چشمی که همیشه روی نتیجه است.</p>
+<ul class="checks">
+<li><svg class="i"><use href="#i-check" xlink:href="#i-check"/></svg>تقویم محتوایی منظم؛ دیگر «امروز چی بذاریم؟» نداریم</li>
+<li><svg class="i"><use href="#i-check" xlink:href="#i-check"/></svg>طراحی پست، استوری و کاور هماهنگ با برند</li>
+<li><svg class="i"><use href="#i-check" xlink:href="#i-check"/></svg>کپشن‌هایی که خوانده می‌شوند، نه فقط دیده</li>
+<li><svg class="i"><use href="#i-check" xlink:href="#i-check"/></svg>انتشار منظم و توجه به واکنش مخاطب</li>
+</ul>
+</article>
+
+<article class="service reveal">
+<span class="service-ic"><svg class="i"><use href="#i-video" xlink:href="#i-video"/></svg></span>
+<h3>تدوین ویدئو و Reels</h3>
+<p>ویدئویی که سه ثانیه اول مخاطب را نگه دارد، نصف راه را رفته است. آن سه ثانیه را خیلی جدی می‌گیرم.</p>
+<ul class="checks">
+<li><svg class="i"><use href="#i-check" xlink:href="#i-check"/></svg>تدوین Reels با ریتم درست و شروعی که میخکوب کند</li>
+<li><svg class="i"><use href="#i-check" xlink:href="#i-check"/></svg>زیرنویس، موسیقی و افکت‌های تمیز و حرفه‌ای</li>
+<li><svg class="i"><use href="#i-check" xlink:href="#i-check"/></svg>ویدئوهای معرفی محصول و آموزشی</li>
+<li><svg class="i"><use href="#i-check" xlink:href="#i-check"/></svg>خروجی مناسب برای هر پلتفرم</li>
+</ul>
+</article>
+
+<article class="service reveal">
+<span class="service-ic"><svg class="i"><use href="#i-code" xlink:href="#i-code"/></svg></span>
+<h3>توسعه افزونه وردپرس</h3>
+<p>وقتی ابزار آماده جواب نمی‌دهد، خودم دست به کد می‌شوم و راه‌حلش را می‌سازم.</p>
+<ul class="checks">
+<li><svg class="i"><use href="#i-check" xlink:href="#i-check"/></svg>ساخت افزونه سفارشی برای نیازهای خاص سایت</li>
+<li><svg class="i"><use href="#i-check" xlink:href="#i-check"/></svg>تجربه ساخت، انتشار و فروش افزونه در راست‌چین</li>
+<li><svg class="i"><use href="#i-check" xlink:href="#i-check"/></svg>شخصی‌سازی و رفع مشکل قالب‌ها و افزونه‌ها</li>
+<li><svg class="i"><use href="#i-check" xlink:href="#i-check"/></svg>شناخت عمیق‌تر وردپرس یعنی سایتی پایدارتر برای شما</li>
+</ul>
+</article>
+</div>
+</div>
+</section>
+
+<!-- Why me -->
+<section id="why" class="why">
+<div class="container">
+<div class="sec-head reveal">
+<span class="eyebrow">چرا من</span>
+<h2>اگر در تیم شما باشم، این‌ها را به دست می‌آورید</h2>
+<p>مهارت فنی را خیلی‌ها دارند. چیزی که فرق می‌سازد، طرز فکر و نگاه به کار است.</p>
+</div>
+
+<div class="why-grid">
+<article class="why-card reveal">
+<span class="ic"><svg class="i"><use href="#i-layers" xlink:href="#i-layers"/></svg></span>
+<h3>یک نفر، چند تخصص</h3>
+<p>سایت، محتوا و ویدئو را جدا از هم نمی‌بینم؛ برای همین پیام برندتان همه‌جا یکدست می‌ماند و هزینه چند نیروی جدا را هم نمی‌دهید.</p>
+</article>
+<article class="why-card reveal">
+<span class="ic"><svg class="i"><use href="#i-target" xlink:href="#i-target"/></svg></span>
+<h3>فکر کسب‌وکاری، نه فقط اجرایی</h3>
+<p>قبل از اینکه چیزی طراحی کنم می‌پرسم مشتری شما کیست و چه می‌خواهد. خروجی باید به هدف شما کمک کند، نه اینکه فقط قشنگ باشد.</p>
+</article>
+<article class="why-card reveal">
+<span class="ic"><svg class="i"><use href="#i-trend" xlink:href="#i-trend"/></svg></span>
+<h3>یادگیری هر روزه</h3>
+<p>ابزار جدید، ترند جدید، تکنیک جدید. نه خودم عقب می‌مانم، نه اجازه می‌دهم کسب‌وکار شما عقب بماند.</p>
+</article>
+<article class="why-card reveal">
+<span class="ic"><svg class="i"><use href="#i-clock" xlink:href="#i-clock"/></svg></span>
+<h3>تحویل تمیز و به‌موقع</h3>
+<p>قولی که می‌دهم را جدی می‌گیرم. کار را با دقت و در زمانی که توافق کرده‌ایم تحویل می‌دهم.</p>
+</article>
+<article class="why-card reveal">
+<span class="ic"><svg class="i"><use href="#i-cpu" xlink:href="#i-cpu"/></svg></span>
+<h3>هوش مصنوعی در خدمت سرعت</h3>
+<p>از ابزارهای هوش مصنوعی استفاده می‌کنم تا محتوا سریع‌تر آماده شود، بدون اینکه کیفیت و حس انسانی‌اش از دست برود.</p>
+</article>
+<article class="why-card reveal">
+<span class="ic"><svg class="i"><use href="#i-zap" xlink:href="#i-zap"/></svg></span>
+<h3>فراتر از قالب آماده</h3>
+<p>جایی که بقیه می‌گویند «نمی‌شود»، من دنبال راهش می‌گردم؛ همان‌طور که وقتی ابزاری نبود، افزونه‌اش را خودم ساختم.</p>
+</article>
+</div>
+
+<div class="why-note reveal">
+<p>هر روزی که سایت و پیج شما بدون برنامه جلو برود، مشتری‌هایی که می‌توانستند مال شما باشند سراغ رقیب می‌روند.</p>
+<a href="#contact" class="btn btn-white">بیایید صحبت کنیم <svg class="i"><use href="#i-arrow" xlink:href="#i-arrow"/></svg></a>
+</div>
+</div>
+</section>
+
+<!-- Growth -->
+<section id="growth">
+<div class="container growth-grid">
+<div class="sticky reveal">
+<div class="sec-head" style="margin-bottom:0">
+<span class="eyebrow">مسیر رشد</span>
+<h2>هیچ‌وقت <span class="grad">ثابت نمی‌مانم.</span></h2>
+<p>هر مرحله از کارم، یک مهارت تازه به جعبه‌ابزارم اضافه کرده است. این مسیر هنوز ادامه دارد.</p>
+</div>
+<blockquote class="quote">
+«فقط کاری را که از من خواسته شده انجام نمی‌دهم؛ دنبال این هستم که آن کار را هر بار بهتر از دفعه قبل انجام بدهم.»
+</blockquote>
+</div>
+
+<ol class="timeline">
+<li class="reveal">
+<span class="step-label">مرحله ۱</span>
+<h3>شروع با وردپرس</h3>
+<p>اولین سایت‌ها را ساختم و خیلی زود فهمیدم یک سایت خوب فقط ظاهر زیبا نیست؛ باید کار کند.</p>
+</li>
+<li class="reveal">
+<span class="step-label">مرحله ۲</span>
+<h3>کار روی سایت‌های واقعی</h3>
+<p>مربی سبز، لپ‌تاپ پارسیان و نورا گلد؛ جایی که با محصول، مشتری و فروش واقعی سروکار داشتم.</p>
+</li>
+<li class="reveal">
+<span class="step-label">مرحله ۳</span>
+<h3>ورود به دنیای محتوا و اینستاگرام</h3>
+<p>ادمین و ادیتور سه پیج شدم و یاد گرفتم چطور محتوایی بسازم که مخاطب برایش بایستد.</p>
+</li>
+<li class="reveal">
+<span class="step-label">مرحله ۴</span>
+<h3>تدوین حرفه‌ای ویدئو</h3>
+<p>تدوین را یاد گرفتم و حالا برای مشتری‌ها Reels و ویدئوهای تبلیغاتی و آموزشی آماده می‌کنم.</p>
+</li>
+<li class="reveal">
+<span class="step-label">مرحله ۵</span>
+<h3>برنامه‌نویسی و ساخت افزونه</h3>
+<p>یک قدم عمیق‌تر رفتم؛ افزونه وردپرس خودم را ساختم و در راست‌چین منتشر کردم.</p>
+</li>
+<li class="reveal now">
+<span class="step-label">همین حالا</span>
+<h3>هوش مصنوعی، سئو و مهارت‌های بیشتر</h3>
+<p>فهرست چیزهایی که می‌خواهم یاد بگیرم هیچ‌وقت تمام نمی‌شود، و همین را دوست دارم.</p>
+</li>
+</ol>
+</div>
+</section>
+
+<!-- Process -->
+<section class="alt">
+<div class="container">
+<div class="sec-head reveal">
+<span class="eyebrow">روند همکاری</span>
+<h2>ساده، شفاف و <span class="grad">بدون دردسر</span></h2>
+<p>از اولین پیام تا تحویل نهایی می‌دانید کار در چه مرحله‌ای است.</p>
+</div>
+
+<div class="process-grid">
+<article class="proc reveal"><span class="num">۰۱</span><h3>گفت‌وگو</h3><p>درباره کسب‌وکار، مخاطب و هدفتان صحبت می‌کنیم.</p></article>
+<article class="proc reveal"><span class="num">۰۲</span><h3>برنامه‌ریزی</h3><p>محدوده کار، اولویت‌ها و زمان تحویل را روشن می‌کنیم.</p></article>
+<article class="proc reveal"><span class="num">۰۳</span><h3>اجرا</h3><p>طراحی، محتوا یا تدوین را با دقت انجام می‌دهم و در جریان پیشرفت کار قرار می‌گیرید.</p></article>
+<article class="proc reveal"><span class="num">۰۴</span><h3>تحویل و پشتیبانی</h3><p>بعد از تأیید شما تحویل می‌دهم و کنارتان می‌مانم.</p></article>
+</div>
+</div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+<div class="container">
+<div class="contact-box reveal">
+<div>
+<span class="eyebrow">شروع همکاری</span>
+<h2>دنبال کسی هستید که کار را واقعاً جلو ببرد؟</h2>
+<p>یک تماس کوتاه کافی است تا ببینیم چطور می‌توانم سایت، پیج یا ویدئوهای شما را یک پله بالاتر ببرم. پیام بدهید؛ خیلی زود جواب می‌دهم.</p>
+</div>
+
+<div>
+<a class="phone" href="tel:+989365529565" aria-label="تماس با امین سجادیان، ۰۹۳۶۵۵۲۹۵۶۵">
+<span><small>تماس مستقیم</small><strong class="ltr">0936 552 9565</strong></span>
+<span class="phone-ic"><svg class="i"><use href="#i-phone" xlink:href="#i-phone"/></svg></span>
+</a>
+
+<div class="contact-btns">
+<a class="btn btn-white" href="https://wa.me/989365529565" data-wa target="_blank" rel="noopener noreferrer">
+<svg class="i"><use href="#i-msg" xlink:href="#i-msg"/></svg>واتس‌اپ
+</a>
+<button class="btn btn-glass" type="button" id="copy-phone">
+<svg class="i"><use href="#i-copy" xlink:href="#i-copy"/></svg>کپی شماره
+</button>
+</div>
+
+<p class="contact-hint">برای دریافت رزومه کامل و نمونه تدوین‌ها هم پیام بدهید.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+<div class="container">
+<p>© <span id="year">۱۴۰۵</span> امین سجادیان · طراحی سایت، ادمین اینستاگرام و تدوین ویدئو</p>
+<div class="footer-links">
+<button type="button" id="print-resume"><svg class="i"><use href="#i-print" xlink:href="#i-print"/></svg>چاپ / PDF</button>
+<a href="#top">بازگشت به بالا ↑</a>
+</div>
+</div>
+</footer>
+
+<!-- Mobile quick actions -->
+<div class="mobile-bar">
+<a class="btn btn-primary" href="tel:+989365529565">
+<svg class="i"><use href="#i-phone" xlink:href="#i-phone"/></svg>تماس
+</a>
+<a class="btn btn-ghost" href="https://wa.me/989365529565" data-wa target="_blank" rel="noopener noreferrer">
+<svg class="i"><use href="#i-msg" xlink:href="#i-msg"/></svg>واتس‌اپ
+</a>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function () {
+"use strict";
+
+var PHONE = "09365529565";
+var INTL = "989365529565";
+var root = document.documentElement;
+
+function each(list, fn) { Array.prototype.forEach.call(list, fn); }
+
+/* Header shadow */
+var header = document.querySelector(".header");
+function onScroll() {
+if ((window.pageYOffset || document.documentElement.scrollTop) > 10) header.classList.add("scrolled");
+else header.classList.remove("scrolled");
+}
+window.addEventListener("scroll", onScroll);
+onScroll();
+
+/* Mobile menu */
+var toggle = document.querySelector(".menu-toggle");
+var menu = document.getElementById("menu");
+var menuIcon = document.getElementById("menu-icon");
+
+function setIcon(name) {
+menuIcon.setAttribute("href", "#" + name);
+menuIcon.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "#" + name);
+}
+function closeMenu() {
+menu.classList.remove("open");
+toggle.setAttribute("aria-expanded", "false");
+setIcon("i-menu");
+}
+toggle.addEventListener("click", function (e) {
+e.stopPropagation();
+var open = !menu.classList.contains("open");
+if (open) {
+menu.classList.add("open");
+toggle.setAttribute("aria-expanded", "true");
+setIcon("i-close");
+} else {
+closeMenu();
+}
+});
+menu.addEventListener("click", function (e) {
+var t = e.target;
+while (t && t !== menu) {
+if (t.tagName === "A") { closeMenu(); break; }
+t = t.parentNode;
+}
+});
+document.addEventListener("click", function (e) {
+if (menu.classList.contains("open") && !menu.contains(e.target)) closeMenu();
+});
+window.addEventListener("resize", function () {
+if (window.innerWidth > 860) closeMenu();
+});
+
+/* WhatsApp message */
+var waText = encodeURIComponent("سلام امین، رزومه‌ات را دیدم و برای همکاری پیام می‌دهم.");
+each(document.querySelectorAll("[data-wa]"), function (a) {
+a.href = "https://wa.me/" + INTL + "?text=" + waText;
+});
+
+/* Toast */
+var toast = document.getElementById("toast");
+var toastTimer;
+function showToast(msg) {
+clearTimeout(toastTimer);
+toast.textContent = msg;
+toast.classList.add("show");
+toastTimer = setTimeout(function () { toast.classList.remove("show"); }, 3500);
+}
+
+/* Copy phone */
+function fallbackCopy(text) {
+var ta = document.createElement("textarea");
+ta.value = text;
+ta.setAttribute("readonly", "");
+ta.style.cssText = "position:fixed;top:0;left:-9999px;font-size:16px";
+document.body.appendChild(ta);
+ta.select();
+var ok = false;
+try { ok = document.execCommand("copy"); } catch (err) { ok = false; }
+document.body.removeChild(ta);
+return ok;
+}
+function copyResult(ok) {
+showToast(ok ? "شماره تماس کپی شد ✓" : "شماره: 09365529565");
+}
+document.getElementById("copy-phone").addEventListener("click", function () {
+if (navigator.clipboard && window.isSecureContext) {
+navigator.clipboard.writeText(PHONE).then(
+function () { copyResult(true); },
+function () { copyResult(fallbackCopy(PHONE)); }
+);
+} else {
+copyResult(fallbackCopy(PHONE));
+}
+});
+
+/* Print */
+document.getElementById("print-resume").addEventListener("click", function () { window.print(); });
+
+/* Persian year */
+try {
+document.getElementById("year").textContent =
+new Intl.DateTimeFormat("fa-IR", { year: "numeric" }).format(new Date());
+} catch (err) {}
+
+/* Reveal on scroll — content stays visible if anything fails */
+var revealEls = document.querySelectorAll(".reveal");
+var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if ("IntersectionObserver" in window && !reduce && revealEls.length) {
+var io = new IntersectionObserver(function (entries) {
+entries.forEach(function (entry) {
+if (entry.isIntersecting || entry.intersectionRatio > 0) {
+entry.target.classList.add("in");
+io.unobserve(entry.target);
+}
+});
+}, { threshold: 0, rootMargin: "0px 0px -30px 0px" });
+
+root.classList.add("anim");
+each(revealEls, function (el) { io.observe(el); });
+
+// Safety: if animation doesn't start, show everything
+setTimeout(function () {
+if (!revealEls[0].classList.contains("in")) root.classList.remove("anim");
+}, 2000);
+}
+
+/* Active navigation */
+var links = Array.prototype.slice.call(document.querySelectorAll("[data-nav]"));
+var sections = links
+.map(function (l) { return document.querySelector(l.getAttribute("href")); })
+.filter(Boolean);
+
+var ticking = false;
+function updateNav() {
+ticking = false;
+var line = header.offsetHeight + 120;
+var current = "";
+sections.forEach(function (s) {
+if (s.getBoundingClientRect().top <= line) current = s.id;
+});
+links.forEach(function (l) {
+var active = l.getAttribute("href") === "#" + current;
+if (active) { l.classList.add("active"); l.setAttribute("aria-current", "location"); }
+else { l.classList.remove("active"); l.removeAttribute("aria-current"); }
+});
+}
+window.addEventListener("scroll", function () {
+if (!ticking) {
+ticking = true;
+(window.requestAnimationFrame || setTimeout)(updateNav);
+}
+});
+window.addEventListener("resize", updateNav);
+updateNav();
+})();
+</script>
+</body>
+</html>
